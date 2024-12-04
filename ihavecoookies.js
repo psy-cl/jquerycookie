@@ -117,7 +117,8 @@
 
             // refuse
             $('body').on('click','#gdpr-cookie-advanced', function(){
-                // Set cookie
+                // remove cookie
+                $('#gdpr-cookie-message').remove();
                 closePopup(true);
                 settings.onAccept.call(this);
             });
@@ -174,7 +175,6 @@
     };
 
     var closePopup = function(value) {
-       
         $('#gdpr-cookie-message').fadeOut('fast', function() {
             $(this).remove();
         });
