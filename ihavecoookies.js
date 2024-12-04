@@ -118,9 +118,9 @@
             // refuse
             $('body').on('click','#gdpr-cookie-advanced', function(){
                 // remove cookie
-                $('#gdpr-cookie-message').remove();
+                console.log('refuse: remove cookie popup');
                 closePopup(true);
-                settings.onAccept.call(this);
+              //  settings.onAccept.call(this);
             });
 
 
